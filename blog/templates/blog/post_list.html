@@ -3,6 +3,11 @@
         <title>Eong DJango Girls blog</title>
     </head>
     <body>
+        {% for post in posts %}
+          <p>published: {{ post.published_date }}</p>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</p>
+        {% endfor %}
         <div>
             <h1><a href="/">Eong Django Girls Blog</a></h1>
         </div>
